@@ -1,6 +1,3 @@
-x=2
-y=12
-answer=x**12
-print(answer)
-sqrt=x**0.5
-print(sqrt)
+input=int(input("Enter the number : "))
+sqrt=input**0.5
+print("The Square Root of the Number is : ",sqrt)
