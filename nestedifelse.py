@@ -1,4 +1,4 @@
-x=int(input("Enter a number"))
+x=int(input("Enter a number : "))
 if x<200:
     print("Variable is less than 200")
     if x<150:

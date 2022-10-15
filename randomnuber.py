@@ -1,2 +1,2 @@
 import random
-print("The Random Number is",random.randint(0,1000))
+print(random.randrange(0,100))
