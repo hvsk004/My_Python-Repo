@@ -55,7 +55,7 @@ def txt():
 
 	# Write the specified text in
 	# specified font style and size
-	pen.write("GeeksForGeeks", font=(
+	pen.write("          HVSK", font=(
 	"Verdana", 12, "bold"))
 
 
