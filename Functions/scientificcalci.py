@@ -1,5 +1,5 @@
 import math
-print("Simple Calculator Python Program")
+print("Scientific Calculator Python Program")
 c=int(input("Enter 1 For Addition\nEnter 2 For Subtraction\nEnter 3 For Multiplication\nEnter 4 For Division\nEnter 5 For Remainder(%)\nEnter 6 for Square Root\nEnter 7 for Exponent\nEnter 8 for Sine Function\nEnter 9 for Cosine function\nEnter 10 for Tnagent Function\nEnter 11 for Radians to degree conversion\nEnter 12 for Degree to Radina conversion\nEnter Your Choice: "))
 def simplecalc(z):
     if z==1:
