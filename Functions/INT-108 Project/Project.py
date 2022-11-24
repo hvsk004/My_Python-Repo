@@ -1,5 +1,6 @@
 N=int(input("Enter the value of N: "))    # Taking User input for the value of N
 magicSquare = [[0 for i in range(N)] for i in range(N)]
+k=(N*(N*N)+1)/2
 def OddMagicsquare(x): #Defining a function to create a magic square
     
     Matrix=[[0 for a in range(N)] for b in range(N)] #Intializing a 2D array with all the values set to zero
@@ -143,6 +144,7 @@ def DoublyEven(N):
 # Driver Program
 if N%2!=0:
     OddMagicsquare(N)
+    print("The Magic Sum is: ")
 elif N%4==2:
     fillSinglyEvenOrder(magicSquare, N)
     for i in range(N):
