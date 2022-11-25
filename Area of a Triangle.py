@@ -1,5 +1,4 @@
 from math import sqrt
-from re import A
 a=input("Enter the length of 1st side ")
 b=input("Enter the length of 2nd side ")
 c=input("Enter the length of 3rd side ")
