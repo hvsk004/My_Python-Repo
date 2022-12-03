@@ -1,0 +1,7 @@
+tuple1=(1,2,3,4,5)
+list1=list(tuple1)
+list1.sort(reverse=True)
+tuple1=tuple(list1)
+print(tuple1)
+name=('Himanth','Venkata','Sai','Krishna')
+print(name)

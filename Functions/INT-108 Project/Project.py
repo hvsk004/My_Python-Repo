@@ -101,46 +101,24 @@ def exchangeCell(i, j, matrix):
     matrix[i][j], matrix[r][j] = matrix[r][j], matrix[i][j]
 
 
-def DoublyEven(N):
-     
-    # 2-D matrix with all entries as 0
-    arr = [[(N*y)+x+1 for x in range(N)]for y in range(N)]
- 
-    # Change value of array elements at fix location
-    # as per the rule (N*N+1)-arr[i][[j]
-     
-    # Corners of order (N/4)*(N/4)
-    # Top left corner
-    for i in range(0,N//4):
-        for j in range(0,N//4):
-            arr[i][j] = (N*N + 1) - arr[i][j];
-     
-    # Top right corner
-    for i in range(0,N//4):
-        for j in range(3 * (N//4),N):
-            arr[i][j] = (N*N + 1) - arr[i][j];
- 
-    # Bottom Left corner
-    for i in range(3 * (N//4),N):
-        for j in range(0,N//4):
-            arr[i][j] = (N*N + 1) - arr[i][j];
-     
-    # Bottom Right corner
-    for i in range(3 * (N//4),N):
-        for j in range(3 * (N//4),N):
-            arr[i][j] = (N*N + 1) - arr[i][j];
-             
-    # Centre of matrix,order (N/2)*(N/2)
-    for i in range(N//4,3 * (N//4)):
-        for j in range(N//4,3 * (N//4)):
-            arr[i][j] = (N*N + 1) - arr[i][j];
-     
-    # Printing the square
-    for i in range(N):
-        for j in range(N):
-            print ('%2d ' %(arr[i][j]),end=" ")
-        print()
-         
+def genMagicSquare(x):
+    p=1
+    m=x//4
+    for i in range(0,x):
+        for j in range(0,x):
+            if i<m and j<m:#Top Left Corner
+                magicSquare[i][j]=p
+            elif x-1-i<m and x-j-1<m:#Bottom Right Corner
+                magicSquare[i][j]=p
+            elif x-i-1<m and j<m:#Bottom Left Corner
+                magicSquare[i][j]=p
+            elif i<m and x-j-1<m:#Top Right Corner
+                magicSquare[i][j]=p
+            elif i>=m and x-i-1>=m and j>=m and x-j-1>=m:#Middle Segment
+                magicSquare[i][j]=p
+            else:#The rest of the Matrix
+                magicSquare[i][j]=x*x+1-p
+            p+=1
 # Driver Program
 if N%2!=0:
     OddMagicsquare(N)
@@ -153,7 +131,12 @@ elif N%4==2:
             if j == N - 1:
                 print()
 else:
-    DoublyEven(N)
+    genMagicSquare(N)#calling the genMagicSquare Function
+for i in range(0,N):#For loop to print the 2D array in the form of a matrix
+    for j in range(0,N):
+        print('%2d ' % (magicSquare[i][j]),end='')
+        if j==n-1:
+            print()
 
 
 
