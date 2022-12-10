@@ -1,6 +1,6 @@
 #Store multiple Values in single variable
 #Unordered
-#unchangable or unmutable
+#unchangable or unmutable but we can add and remove elements
 #Duplicates are not allowed
 myset={'Supercar','Superbike','Yacht'}
 print(myset)
@@ -14,3 +14,5 @@ for i in myset2:
         print(True)
     else:
         print(False)
+myset3=myset.union(myset2)
+print(myset3)
