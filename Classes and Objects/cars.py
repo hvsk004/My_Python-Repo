@@ -12,4 +12,4 @@ print("Mileage of Car 2 is",car2.mileage,id(car2))
 Car.wheels=5
 print(car1.wheels)
 print(car2.wheels)
-#Static Variable: The variables which are shared by the whole class are known as static variables.
+#Static/Class Variable: The variables which are shared by the whole class are known as static variables.
