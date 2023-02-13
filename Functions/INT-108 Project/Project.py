@@ -135,7 +135,7 @@ else:
 for i in range(0,N):#For loop to print the 2D array in the form of a matrix
     for j in range(0,N):
         print('%2d ' % (magicSquare[i][j]),end='')
-        if j==n-1:
+        if j==N-1:
             print()
 
 
